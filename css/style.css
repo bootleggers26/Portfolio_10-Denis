@@ -1,13 +1,13 @@
 @font-face {
-  font-family: "Gilroy";
-  src: url(/fonts/otf/Gilroy-ExtraBold.otf) format("opentype"),
-    url(/fonts/otf/Gilroy-Light.otf) format("opentype"),
-    url(/fonts/ttf/Gilroy-Bold.ttf) format("truetype"),
-    url(/fonts/ttf/Gilroy-Medium.ttf) format("truetype"),
-    url(/fonts/woff/Gilroy-ExtraBold.woff) format("woff"),
-    url(/fonts/woff/Gilroy-Light.woff) format("woff"),
-    url(//fonts/woff2/Gilroy-ExtraBold.woff2) format("woff2"),
-    url(/fonts/woff2/Gilroy-Light.woff2) format("woff2");
+  font-family: "Gilroy-Bold";
+  src: url(/fonts/ttf/Gilroy-Bold.ttf) format("truetype");
+  font-weight: bold;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Gilroy-Medium";
+  src: url(/fonts/ttf/Gilroy-Medium.ttf) format("truetype");
   font-weight: normal;
   font-style: normal;
 }
@@ -21,7 +21,7 @@ html {
 }
 body {
   margin: 0;
-  font-family: "Gilroy", sans-serif;
+  font-family: "Gilroy-Medium", sans-serif;
 }
 .container {
   max-width: 1445px;
@@ -34,49 +34,66 @@ body {
 }
 /* header */
 .nav {
-  display: flex;
-  justify-content: space-between;
+  margin-left: 252px;
+  margin-right: 248px;
+  margin-top: 29px;
+  margin-bottom: 36px;
 }
 .ul__flex {
+  display: flex;
+  justify-content: space-between;
+  margin: 0;
+  padding: 0;
 }
-.ul__flex li {
-  color: var(--black);
+.ul__flex li,
+.ul__flex a {
+  color: var(--gray-color);
   font-family: Gilroy-Bold;
   font-size: 18px;
-  font-style: normal;
   font-weight: 400;
-  line-height: normal;
+  list-style: none;
+  text-decoration: none;
+}
+.ul__flex a:hover {
+  color: var(--black);
 }
 .line {
   width: 940.604px;
-  height: 0px;
-  stroke-width: 1px;
-  stroke: var(--gray-color);
+  height: 1px;
   background-color: var(--gray-color);
+  margin: 0 auto;
 }
 .article__flex {
   display: flex;
-  justify-content: center;
-}
-.article__flex {
-  display: flex;
-  justify-content: center;
+  justify-content: space-between;
+  margin-left: 252px;
+  margin-top: 30px;
+  margin-right: 248px;
+  margin-bottom: 41px;
 }
 .header__about-left {
+  display: flex;
+  align-items: center;
 }
 .h1__header {
   color: var(--Black, #070707);
   font-family: Gilroy-Bold;
   font-size: 47.339px;
   font-weight: 400;
+  margin: 0;
+  width: 123.513px;
+  height: 118.174px;
 }
 .p__about {
   color: var(--Black, #070707);
   font-family: Gilroy-Medium;
   font-size: 18px;
-  font-style: normal;
   font-weight: 400;
-  line-height: normal;
+  margin: 0;
+  width: 155.646px;
+  height: 44.065px;
+  margin-left: 296px;
+  margin-top: 47px;
 }
 .header__about-right {
 }
@@ -84,24 +101,73 @@ body {
 }
 .li-items {
 }
-.languge {
+.languge__flex {
+  display: flex;
+  writing-mode: vertical-rl;
+  writing-mode: vertical-lr;
+  transform: rotate(180deg);
+  margin-top: 41px;
+  margin-right: 3px;
+  gap: 3px;
+}
+.ru {
   color: var(--gray-color);
   font-family: Gilroy-Bold;
   font-size: 16px;
-  font-style: normal;
   font-weight: 400;
-  line-height: normal;
+  margin: 0;
+  cursor: pointer;
+}
+.eng {
+  color: var(--black);
+  font-family: Gilroy-Bold;
+  font-size: 16px;
+  font-weight: 400;
+  margin: 0;
+  cursor: pointer;
+}
+.ru:hover,
+.eng:hover {
+  color: #1991cd;
 }
 .img__carouselBlock {
+  width: 100%;
+  overflow: hidden;
+  max-width: 943.612px;
+  max-height: 387px;
+  text-align: center;
+  margin: 0 auto;
+}
+.carousel {
+  max-width: 943.612px;
+  max-height: 387px;
+  display: flex;
+  transition: transform 0.5s ease-in-out;
+  text-align: center;
+  margin: 0 auto;
 }
 .img__carousel {
   width: 100%;
   height: auto;
   max-width: 100%;
   max-height: 100%;
-  width: 943.612px;
-  height: 387px;
+  max-width: 943.612px;
+  max-height: 387px;
 }
+.button_carousel {
+  text-align: center;
+}
+.prev,
+.next {
+  font-family: Gilroy-Bold;
+  border: none;
+  cursor: pointer;
+}
+.prev:hover,
+.next:hover {
+  color: #263238;
+}
+
 /* berger */
 .burger-menu {
   display: none;
@@ -131,9 +197,7 @@ header .menu-modal li,
   color: #263238;
   font-family: Poppins;
   font-size: 16px;
-  font-style: normal;
   font-weight: 500;
-  line-height: normal;
 }
 .menu-modal ul {
   list-style: none;
