@@ -1,3 +1,3 @@
 Portfolio_9-Denis
 
-![Portfolio_9-Denis](../Portfolio_9-Denis/img/Frame%201%20-%20Desktop.png)
+![Portfolio_9-Denis](/img/1%20-%20Desktop.jpg)
