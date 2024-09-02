@@ -1,0 +1,11 @@
+@media screen and (max-width: 1200px) {
+  .ul__flex {
+    display: none;
+  }
+  .burger-menu {
+    display: block;
+  }
+  .burger-menu {
+    padding-top: 14px;
+  }
+}
