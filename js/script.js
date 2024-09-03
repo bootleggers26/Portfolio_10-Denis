@@ -46,3 +46,10 @@ document.addEventListener("click", (e) => {
     menuModal.style.display = "none";
   }
 });
+
+// кнопка закрытия
+const closeIcon = document.querySelector(".closeIcon");
+
+closeIcon.addEventListener("click", () => {
+  menuModal.style.display = "none";
+});

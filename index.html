@@ -8,26 +8,26 @@
     <title>Denis</title>
   </head>
   <body>
-    <header class="header">
+    <header class="header" id="header">
       <div class="container">
         <div class="nav">
           <ul class="ul__flex">
-            <li><a href="#">Home</a></li>
-            <li><a href="#">About me</a></li>
-            <li><a href="#">Skills</a></li>
-            <li><a href="#">Portfolio</a></li>
-            <li><a href="#">Contacts</a></li>
+            <li><a href="#header">Home</a></li>
+            <li><a href="#about">About me</a></li>
+            <li><a href="#skills">Skills</a></li>
+            <li><a href="#portfolio">Portfolio</a></li>
+            <li><a href="#contacts">Contacts</a></li>
           </ul>
         </div>
         <div class="line"></div>
         <article class="article__flex">
           <div class="header__about-left">
             <h1 class="h1__header">Denis Novik</h1>
-            <p class="p__about">
-              UX | UI designer <br />
-              24 years old, Minsk
-            </p>
           </div>
+          <p class="p__about">
+            UX | UI designer <br />
+            24 years old, Minsk
+          </p>
           <div class="header__about-right">
             <!-- ------------------ burger-menu --------------------------- -->
             <div class="burger-menu">
@@ -36,13 +36,23 @@
               <div class="burger-icon"></div>
             </div>
             <div class="menu-modal">
-              <ul>
-                <li><a href="#">Home</a></li>
-                <li><a href="#">About me</a></li>
-                <li><a href="#">Skills</a></li>
-                <li><a href="#">Portfolio</a></li>
-                <li><a href="#">Contacts</a></li>
-              </ul>
+              <div class="flex-modal">
+                <ul>
+                  <li><a href="#header">Home</a></li>
+                  <li><a href="#about">About me</a></li>
+                  <li><a href="#skills">Skills</a></li>
+                  <li><a href="#portfolio">Portfolio</a></li>
+                  <li><a href="#contacts">Contacts</a></li>
+                </ul>
+                <!-- кнопка и язык -->
+                <div class="right">
+                  <img class="closeIcon" src="img/closeIcon.svg" alt="close" />
+                  <div class="flex">
+                    <p class="ru new">RU</p>
+                    <p class="eng new">| ENG</p>
+                  </div>
+                </div>
+              </div>
             </div>
             <!-- ------------------ burger-menu --------------------------- -->
             <div class="languge__flex">
@@ -87,7 +97,7 @@
       </div>
     </header>
     <!-- section1 -->
-    <section class="about">
+    <section class="about" id="about">
       <div class="flex__about">
         <h2 class="h2__about">About me</h2>
         <p class="p_one">
@@ -105,7 +115,7 @@
       </div>
     </section>
     <!-- section2 -->
-    <section class="skills">
+    <section class="skills" id="skills">
       <div class="container">
         <div class="text">
           <h2 class="h2__skills">Skills</h2>
@@ -204,7 +214,70 @@
         </div>
       </div>
     </section>
-
+    <!-- section2 -->
+    <section class="portfolio" id="portfolio">
+      <div class="container">
+        <h2 class="h2__portfolio">Portfolio</h2>
+        <div class="fashion">
+          <img class="img__fashion" src="img/Portfolio/woman.png" alt="img" />
+          <p class="p__fashion">Online fashion store - Homepage</p>
+        </div>
+        <div class="reebok">
+          <img class="img__reebok" src="img/Portfolio/reebok.png" alt="img" />
+          <p class="p__reebok">Reebok Store - Concept</p>
+        </div>
+        <div class="camera">
+          <img class="img__camera" src="img/Portfolio/Camera.png" alt="img" />
+          <p class="p__camera">Braun Landing Page - Concept</p>
+        </div>
+      </div>
+    </section>
+    <!-- footer -->
+    <footer class="footer" id="contacts">
+      <div class="container">
+        <article class="contacts">
+          <h2 class="h2__contacts">Contacts</h2>
+          <p class="p__contacts">
+            Want to know more or just chat? <br />
+            You are welcome!
+          </p>
+          <button class="button__contacts">
+            <a href="mailto:info@info.ru">Send message</a>
+          </button>
+          <article class="icons">
+            <ul class="icons-items">
+              <li>
+                <a href="https://www.linkedin.com/"
+                  ><img class="inst" src="img/footer/in.svg" alt="linkedin"
+                /></a>
+              </li>
+              <li>
+                <a href="https://instagram.com/"
+                  ><img
+                    class="inst"
+                    src="img/footer/Group 8.svg"
+                    alt="instagram"
+                /></a>
+              </li>
+              <li>
+                <a href="https://www.behance.net/"
+                  ><img class="inst" src="img/footer/Be.svg" alt="Behance"
+                /></a>
+              </li>
+              <li>
+                <a href="https://dribbble.com//"
+                  ><img class="inst" src="img/footer/ball.svg" alt="dribbble"
+                /></a>
+              </li>
+            </ul>
+            <p class="p__icons">
+              Like me on <br />
+              LinkedIn, Instagram, Behance, Dribble
+            </p>
+          </article>
+        </article>
+      </div>
+    </footer>
     <script src="js/script.js"></script>
   </body>
 </html>

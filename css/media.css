@@ -1,11 +1,28 @@
-@media screen and (max-width: 1200px) {
-  .ul__flex {
+@media screen and (max-width: 500px) {
+  .ul__flex,
+  .languge__flex,
+  .line {
     display: none;
   }
   .burger-menu {
     display: block;
   }
+  .article__flex {
+    flex-direction: column;
+    margin-top: 65px;
+  }
+
+  .p__about {
+    margin-right: 0;
+    margin-top: 23px;
+  }
+  .header__about-left {
+    display: block;
+  }
   .burger-menu {
-    padding-top: 14px;
+    display: block;
+    position: absolute;
+    top: 74px;
+    right: 10px; /* Устанавливаем фиксированное положение справа */
   }
 }
