@@ -12,21 +12,28 @@
       <div class="container">
         <div class="nav">
           <ul class="ul__flex">
-            <li><a href="#header">Home</a></li>
-            <li><a href="#about">About me</a></li>
-            <li><a href="#skills">Skills</a></li>
-            <li><a href="#portfolio">Portfolio</a></li>
-            <li><a href="#contacts">Contacts</a></li>
+            <li data-lang="eng"><a href="#header" data-lang="eng">Home</a></li><li data-lang="ru" style="display: none"><a href="#header" data-lang="ru" style="display: none">Домой</a></li>
+            <li data-lang="eng"><a href="#about" data-lang="eng">About me</a></li data-lang="ru" style="display: none"><a href="#header" data-lang="ru" style="display: none">Обо мне</a></li>
+            <li data-lang="eng"><a href="#skills" data-lang="eng">Skills</a></li data-lang="ru" style="display: none"><a href="#header" data-lang="ru" style="display: none">Навыки</a></li>
+            <li data-lang="eng"<a href="#portfolio" data-lang="eng">Portfolio</a></li data-lang="ru" style="display: none"><a href="#header" data-lang="ru" style="display: none">Портфолио</a></li>
+            <li data-lang="eng"><a href="#contacts" data-lang="eng">Contacts</a></li data-lang="ru" style="display: none"><a href="#header" data-lang="ru" style="display: none">Контакты</a></li>
           </ul>
         </div>
         <div class="line"></div>
         <article class="article__flex">
           <div class="header__about-left">
-            <h1 class="h1__header">Denis Novik</h1>
+            <h1 class="h1__header" data-lang="eng">Denis Novik</h1>
+            <h1 class="h1__header" data-lang="ru" style="display: none">
+              Денис Новик
+            </h1>
           </div>
-          <p class="p__about">
+          <p class="p__about" data-lang="eng">
             UX | UI designer <br />
             24 years old, Minsk
+          </p>
+          <p class="p__about" data-lang="ru" style="display: none">
+            UX | UI дизайнер <br />
+            24 года, Минск
           </p>
           <div class="header__about-right">
             <!-- ------------------ burger-menu --------------------------- -->
@@ -38,26 +45,26 @@
             <div class="menu-modal">
               <div class="flex-modal">
                 <ul>
-                  <li><a href="#header">Home</a></li>
-                  <li><a href="#about">About me</a></li>
-                  <li><a href="#skills">Skills</a></li>
-                  <li><a href="#portfolio">Portfolio</a></li>
-                  <li><a href="#contacts">Contacts</a></li>
+                  <li data-lang="eng"><a href="#header" data-lang="eng">Home</a></li><li data-lang="ru" style="display: none"><a href="#header" data-lang="ru" style="display: none">Домой</a></li>
+                  <li data-lang="eng"><a href="#about" data-lang="eng">About me</a></li data-lang="ru" style="display: none"><a href="#header" data-lang="ru" style="display: none">Обо мне</a></li>
+                  <li data-lang="eng"><a href="#skills" data-lang="eng">Skills</a></li data-lang="ru" style="display: none"><a href="#header" data-lang="ru" style="display: none">Навыки</a></li>
+                  <li data-lang="eng"><a href="#portfolio" data-lang="eng">Portfolio</a></li data-lang="ru" style="display: none"><a href="#header" data-lang="ru" style="display: none">Портфолио</a></li>
+                  <li data-lang="eng"><a href="#contacts" data-lang="eng">Contacts</a></li data-lang="ru" style="display: none"><a href="#header" data-lang="ru" style="display: none">Контакты</a></li>
                 </ul>
                 <!-- кнопка и язык -->
                 <div class="right">
                   <img class="closeIcon" src="img/closeIcon.svg" alt="close" />
-                  <div class="flex">
-                    <p class="ru new">RU</p>
-                    <p class="eng new">| ENG</p>
+                  <div class="flex" id="languageSwitch1">
+                    <p class="ru new" id="ru">RU</p>
+                    <p class="eng new" id="eng">| ENG</p>
                   </div>
                 </div>
               </div>
             </div>
             <!-- ------------------ burger-menu --------------------------- -->
-            <div class="languge__flex">
-              <p class="ru">RU</p>
-              <p class="eng">| ENG</p>
+            <div class="languge__flex" id="languageSwitch2">
+              <p class="ru" id="ru">RU</p>
+              <p class="eng" id="eng">| ENG</p>
             </div>
           </div>
         </article>
@@ -91,26 +98,45 @@
           </div>
         </div>
         <div class="button_carousel">
-          <button class="prev">Prev</button>
-          <button class="next">Next</button>
+          <button class="prev" data-lang="eng">Prev</button>
+        </button>
+        <button class="next" data-lang="eng">Next</button>
+        <button class="prev" data-lang="ru" style="display: none">
+          Пред
+          <button class="next" data-lang="ru" style="display: none">
+            След
+          </button>
         </div>
       </div>
     </header>
     <!-- section1 -->
     <section class="about" id="about">
       <div class="flex__about">
-        <h2 class="h2__about">About me</h2>
-        <p class="p_one">
+        <h2 class="h2__about" data-lang="eng">About me</h2>
+        <h2 class="h2__about" data-lang="ru" style="display: none">Обо мне</h2>
+        <p class="p_one" data-lang="eng">
           Hi, I'm Denis – UX/UI designer from Minsk. <br />
           I'm interested in design and everything connected with it.
         </p>
-        <p class="p_two">
+        <p class="p_one" data-lang="ru" style="display: none">
+          Привет меня зовут Денис - я UX/UI дизайнер из Минска <br />
+          Мне интересен дизайн и все что с ним связано.
+        </p>
+        <p class="p_two" data-lang="eng">
           I'm studying at courses "Web and mobile design interfaces" in
           IT-Academy.
         </p>
-        <p class="p_tree">
+        <p class="p_two" data-lang="ru" style="display: none">
+          Я обучаюсь на курсах "Десктопный и мобильный дизайн итерфейсов" в
+          IT-Академиию
+        </p>
+        <p class="p_tree" data-lang="eng">
           Ready to implement excellent projects <br />
           with wonderful people.
+        </p>
+        <p class="p_tree" data-lang="ru" style="display: none">
+          Готов реализовать отличные проекты <br />
+          с замечательными людьми
         </p>
       </div>
     </section>
@@ -118,8 +144,14 @@
     <section class="skills" id="skills">
       <div class="container">
         <div class="text">
-          <h2 class="h2__skills">Skills</h2>
-          <p class="p__skills">I work in such programs as</p>
+          <h2 class="h2__skills" data-lang="eng">Skills</h2>
+          <h2 class="h2__skills" data-lang="ru" style="display: none">
+            Навыки
+          </h2>
+          <p class="p__skills" data-lang="eng">I work in such programs as</p>
+          <p class="p__skills" data-lang="ru" style="display: none">
+            Я работаю в таких программах как
+          </p>
         </div>
         <div class="flex__skills">
           <div class="skill__item">
@@ -217,7 +249,10 @@
     <!-- section2 -->
     <section class="portfolio" id="portfolio">
       <div class="container">
-        <h2 class="h2__portfolio">Portfolio</h2>
+        <h2 class="h2__portfolio" data-lang="eng">Portfolio</h2>
+        <h2 class="h2__portfolio" data-lang="ru" style="display: none">
+          Портфолио
+        </h2>
         <div class="fashion">
           <img class="img__fashion" src="img/Portfolio/woman.png" alt="img" />
           <p class="p__fashion">Online fashion store - Homepage</p>
@@ -236,13 +271,23 @@
     <footer class="footer" id="contacts">
       <div class="container">
         <article class="contacts">
-          <h2 class="h2__contacts">Contacts</h2>
-          <p class="p__contacts">
+          <h2 class="h2__contacts" data-lang="eng">Contacts</h2>
+          <h2 class="h2__contacts" data-lang="ru" style="display: none">
+            Контакты
+          </h2>
+          <p class="p__contacts" data-lang="eng">
             Want to know more or just chat? <br />
             You are welcome!
           </p>
+          <p class="p__contacts" data-lang="ru" style="display: none">
+            Хотите узнать больше или просто пообщаться? <br />
+            Пожалуйста!
+          </p>
           <button class="button__contacts">
-            <a href="mailto:info@info.ru">Send message</a>
+            <a href="mailto:info@info.ru" data-lang="eng">Send message</a>
+            <a href="mailto:info@info.ru" data-lang="ru" style="display: none"
+              >Сообщение</a
+            >
           </button>
           <article class="icons">
             <ul class="icons-items">
@@ -270,8 +315,12 @@
                 /></a>
               </li>
             </ul>
-            <p class="p__icons">
+            <p class="p__icons" data-lang="eng">
               Like me on <br />
+              LinkedIn, Instagram, Behance, Dribble
+            </p>
+            <p class="p__icons" data-lang="ru" style="display: none">
+              Подпишись на меня <br />
               LinkedIn, Instagram, Behance, Dribble
             </p>
           </article>

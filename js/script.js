@@ -53,3 +53,33 @@ const closeIcon = document.querySelector(".closeIcon");
 closeIcon.addEventListener("click", () => {
   menuModal.style.display = "none";
 });
+
+// разный язык
+
+function switchLanguage(event) {
+  const isRussian = event.target.id === "ru";
+
+  // Скрываем все элементы с текстом на разных языках
+  document.querySelectorAll("[data-lang]").forEach(function (element) {
+    element.style.display = "none";
+  });
+
+  // Показываем элементы с выбранным языком
+  if (isRussian) {
+    document.querySelectorAll('[data-lang="ru"]').forEach(function (element) {
+      element.style.display = "block";
+    });
+  } else {
+    document.querySelectorAll('[data-lang="eng"]').forEach(function (element) {
+      element.style.display = "block";
+    });
+  }
+}
+
+// Добавляем обработчики для обоих переключателей
+document
+  .getElementById("languageSwitch1")
+  .addEventListener("click", switchLanguage);
+document
+  .getElementById("languageSwitch2")
+  .addEventListener("click", switchLanguage);
